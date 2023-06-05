@@ -9,9 +9,12 @@ import { AccessAlarm } from '@mui/icons-material';
 
 import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
 
+import { useNavigate } from 'react-router-dom';
 import { Links } from './styles'
 
 const NavBar = () => {
+  const navigate = useNavigate()
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -23,7 +26,7 @@ const NavBar = () => {
             <AccessAlarm color="primary" sx={{ fontSize: 18 }} />
             <Button color="inherit">Order history</Button>
           </Links>
-          <Links>
+          <Links onClick={() => navigate('/cart')}>
           <ShoppingCartCheckoutIcon color="primary" sx={{ fontSize: 18 }} />
             <Button color="inherit">My Cart</Button>
           </Links>

@@ -16,9 +16,9 @@ function Categories({ data = {} }) {
 
 	const handleRouting = (id = '') => {
 		if (id) {
-			navigate(`/cogo-store/category/${id}?isCategory=true`);
+			navigate(`/store/category/${id}?isCategory=true`);
 		} else {
-			navigate('/cogo-store/allcategory');
+			navigate('/store/allcategory');
 		}
 	};
 
