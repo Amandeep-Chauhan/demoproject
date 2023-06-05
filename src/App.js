@@ -1,8 +1,9 @@
 import './App.css';
 
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import Home from './pages/Home';
-import Layout from './components/Layout';
+
+import Dashboard from './Components/Dashboard';
+import Layout from './Layout';
 
 const router = createBrowserRouter([
   {
@@ -11,7 +12,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />
+        element: <Dashboard />
       },
       {
         path: "/details",
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
       {
         path: "/category",
         errorElement: <div>error comp</div>,
-        element: <div>details</div>,
+        element: <div>category</div>,
       }
     ],
   },

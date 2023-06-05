@@ -5,14 +5,14 @@ const Layout = () => {
     return (
         <div>
              <div>
-            header
+                 header
             </div>
             <div style={{
                 width: '100%',
                 height: '400px',
                 backgroundColor: 'red',
             }}>
-            <Outlet />
+                <Outlet />
             </div>
         </div>
     )
