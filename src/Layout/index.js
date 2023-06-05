@@ -1,11 +1,14 @@
 import React from 'react';
 import { Outlet } from 'react-router';
+import NavBar from './NavBar';
+
+import {Container} from './styles'
 
 const Layout = () => {
     return (
-        <div>
-             <div>
-                 header
+        <Container>
+            <div >
+                <NavBar />
             </div>
             <div style={{
                 width: '100%',
@@ -14,7 +17,7 @@ const Layout = () => {
             }}>
                 <Outlet />
             </div>
-        </div>
+        </Container>
     )
 } 
 
