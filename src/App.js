@@ -1,11 +1,15 @@
 import './App.css';
 
+import { CreateContext } from "./CreateContext";
+import React, { createContext, useState } from 'react'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 import Dashboard from './Components/Dashboard';
 import Layout from './Layout';
 import Cart from './Components/Cart';
 import ProductDetails from './Components/ProductDetails';
+
+export const Context = createContext();
 
 const router = createBrowserRouter([
   {
@@ -42,13 +46,17 @@ const router = createBrowserRouter([
       
     ],
   },
-
 ]);
 
+
 function App() {
+  const [store, setStore] = useState({ test: 'wwww' });
+
   return (
     <div className="App">
+      <CreateContext.Provider value={{ store, setStore}}>
           <RouterProvider router={router} />
+      </CreateContext.Provider>
     </div>
   );
 }
