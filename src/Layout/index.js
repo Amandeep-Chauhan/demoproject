@@ -10,9 +10,7 @@ const Layout = () => {
             <div >
                 <NavBar />
             </div>
-            <div style={{
-                width: '100%',
-            }}>
+            <div style={{ paddingInline: '30px'}}>
                 <Outlet />
             </div>
         </Container>

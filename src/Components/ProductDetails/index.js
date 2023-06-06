@@ -11,6 +11,7 @@ import Typography from '@mui/material/Typography';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
 
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
@@ -65,24 +66,24 @@ function ProductDetails() {
 					cogopoints={cogopoints}
 				/>
 
-				<div>
-				{tncCollapse.map((item) => (
-					<Accordion>
-						<AccordionSummary
-							expandIcon={<ExpandMoreIcon />}
-							aria-controls="panel1a-content"
-							id="panel1a-header"
-						>
-						<Typography>{item?.title}</Typography>
-						</AccordionSummary>
-						<AccordionDetails>
-						<Typography>
-							{item.children}
-						</Typography>
-						</AccordionDetails>
-					</Accordion>
-				))}
-					
+				<div className={styles.accordion}>
+					{tncCollapse.map((item) => (
+						<Accordion>
+							<AccordionSummary
+								expandIcon={<ExpandMoreIcon />}
+								aria-controls="panel1a-content"
+								id="panel1a-header"
+							>
+								<PlayArrowIcon />
+								<Typography>{item?.title}</Typography>
+							</AccordionSummary>
+							<AccordionDetails>
+								<Typography>
+									{item.children}
+								</Typography>
+							</AccordionDetails>
+						</Accordion>
+					))}
 				</div>
 
 				{/* <div className={styles.voucher}>

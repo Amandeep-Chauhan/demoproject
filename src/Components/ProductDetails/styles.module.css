@@ -6,10 +6,15 @@
 
 .product_details {
 	display: flex;
+margin-top: 12px;
 
 	@media (max-width: 767px) {
 		flex-direction: column;
 	}
+}
+
+.accordion {
+	margin-top: 20px;
 }
 
 .product_image {

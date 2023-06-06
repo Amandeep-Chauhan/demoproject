@@ -10,7 +10,7 @@ const getProductDetails = ({
 	const option =
 		user_purchase_limit === -1
 			? OPTIONS
-			: OPTIONS?.filter((ite) => +ite.value <= user_purchase_limit);
+			: OPTIONS?.filter((item) => +item.value <= user_purchase_limit);
 
 	const tncCollapse = [
 		{

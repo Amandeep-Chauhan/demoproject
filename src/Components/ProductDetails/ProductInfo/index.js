@@ -16,7 +16,6 @@ function ProductInfo({
 	const navigate = useNavigate();
 	const [image, setImage] = useState('');
 	const [productCount, setProductCount] = useState(1);
-	console.log(">>>>  productCount:", productCount);
 
 	const {
 		name = '',
@@ -76,7 +75,7 @@ function ProductInfo({
 										size="small"
 										/>
 									</div>
-									<Button className={styles.add_to_cart_button}>
+									<Button className={styles.add_to_cart_button} variant='contained'>
 										add to cart
 									</Button>
 								</>
