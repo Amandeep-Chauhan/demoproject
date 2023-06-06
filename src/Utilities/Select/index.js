@@ -4,7 +4,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-const SelectSmall = ({label, value, options = [], handleChange})=> {
+const SelectSmall = ({label, value, options = [], onChange})=> {
 
   return (
     <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
@@ -14,7 +14,7 @@ const SelectSmall = ({label, value, options = [], handleChange})=> {
         id="demo-select-small"
         value={value}
         label="Age"
-        onChange={handleChange}
+        onChange={onChange}
       >
         {options.map(({label, value})=> <MenuItem value={value}>{label}</MenuItem>)}
       </Select>
